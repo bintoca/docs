@@ -20,31 +20,31 @@ Globals:
     AutoPublishAlias: live
     DeploymentPreference:
       Enabled: true
-      Type: Canary10Percent5Minutes
+      Type: AllAtOnce
       Role: !Ref CodeDeployRole
 
 Resources:
-  GetHelloWorld:
+  LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-GetHelloWorld'
-      Handler: index.get
-      Runtime: nodejs12.x
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-${Stage}'
+      Handler: index.handler
+      Runtime: nodejs14.x
+      Environment:
+        Variables:
+          STAGE: !Sub '${Stage}'
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
       Events:
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /
-            Method: get
+        HttpApiEvent:
+          Type: HttpApi
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub 'CodeStar-${ProjectId}-Execution${Stage}'
+      RoleName: !Sub 'CodeStar-${ProjectId}-Execution-${Stage}'
       AssumeRolePolicyDocument:
         Statement:
         - Effect: Allow
