@@ -30,9 +30,6 @@ Resources:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda'
       Handler: index.handler
       Runtime: nodejs14.x
-      Environment:
-        Variables:
-          STAGE: !Sub '${Stage}'
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
