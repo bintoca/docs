@@ -27,7 +27,7 @@ Resources:
   LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-'
       Handler: index.handler
       Runtime: nodejs14.x
       Role:
