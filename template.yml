@@ -27,7 +27,7 @@ Resources:
   LambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-${Stage}'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda'
       Handler: index.handler
       Runtime: nodejs14.x
       Environment:
@@ -44,7 +44,7 @@ Resources:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub 'CodeStar-${ProjectId}-Execution-${Stage}'
+      RoleName: !Sub 'CodeStar-${ProjectId}-Execution${Stage}'
       AssumeRolePolicyDocument:
         Statement:
         - Effect: Allow
