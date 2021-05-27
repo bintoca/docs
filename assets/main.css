@@ -74,8 +74,18 @@ div.content {
     padding: 0 1em;
 }
 
-nav a {
-    margin-right: 2em;
+nav.bc {
+    padding: 1em 0;
+}
+nav.bc a:last-child {
+    color: #888;
+}
+
+nav.bc a:not(:last-child)::after {
+    content: "/";
+    color: #888;
+    padding: 0 8px;
+    display: inline-block;
 }
 
 header {

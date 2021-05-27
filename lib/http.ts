@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 import zlib from 'zlib'
 import { html, content, render } from './md'
 
@@ -9,16 +8,22 @@ export async function handler(req: { method: string, path: string, headers: { [h
     try {
         switch (req.method) {
             case 'GET': {
-                const assetsName = path.join(__dirname, '..', 'assets', req.path.substring(1))
-                const contentName = './content' + (req.path == '/' ? '' : req.path)
-                if (!req.path.endsWith('.md') && fs.existsSync(contentName)) {
-                    r.body = render(contentName + (fs.lstatSync(contentName).isDirectory() ? '/index.md' : '.md'))
+                const assetsName = './assets' + req.path
+                const contentName = './content' + (req.path.endsWith('/') ? req.path.substring(0, req.path.length - 1) : req.path)
+                const contentExist = fs.existsSync(contentName)
+                if (!req.path.endsWith('.md') && (contentExist || fs.existsSync(contentName + '.md'))) {
+                    r.body = render(contentName + (contentExist ? '/index.md' : '.md'), req.path)
                 }
                 else if (fs.existsSync(assetsName)) {
                     r.body = fs.readFileSync(assetsName)
-                    if (Number.parseInt(req.path.substring(1, req.path.lastIndexOf('.')))) {
-                        cacheControlPublic(r, 60 * 60 * 24 * 365)
-                    }
+                }
+                else if (req.path == mainCssName) {
+                    r.body = fs.readFileSync('./assets/main.css')
+                    cacheControlPublic(r, 60 * 60 * 24 * 365)
+                }
+                else if (req.path == mainJsName) {
+                    r.body = fs.readFileSync('./assets/main.js')
+                    cacheControlPublic(r, 60 * 60 * 24 * 365)
                 }
                 else {
                     r.statusCode = 404
@@ -62,3 +67,10 @@ function contentType(path: string): string {
     return 'text/html'
 }
 function ct(r: resp, path: string) { r.headers['Content-Type'] = contentType(path) }
+
+import * as crypto from 'crypto'
+export function sha256(buf: BufferSource) {
+    return crypto.createHash('sha256').update(Buffer.from(buf instanceof ArrayBuffer ? Buffer.from(buf) : Buffer.from(buf.buffer, buf.byteOffset, buf.byteLength))).digest()
+}
+export const mainCssName = '/' + sha256(fs.readFileSync('./assets/main.css')).toString('hex').substring(0, 20) + '.css'
+export const mainJsName = '/' + sha256(fs.readFileSync('./assets/main.js')).toString('hex').substring(0, 20) + '.js'
