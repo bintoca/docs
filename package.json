@@ -11,5 +11,14 @@
     "scripts": {
         "test": "node test.js",
         "start": "npm test && node lib/dev.js"
+    },
+    "dependencies": {
+        "@iarna/toml": "^2.2.5",
+        "rehype-stringify": "^8.0.0",
+        "remark-extract-frontmatter": "^3.1.0",
+        "remark-frontmatter": "^3.0.0",
+        "remark-parse": "^9.0.0",
+        "remark-rehype": "^8.1.0",
+        "unified": "^9.2.1"
     }
 }

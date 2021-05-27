@@ -1,0 +1,118 @@
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    margin: 0;
+}
+
+p, pre, table, ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+pre {
+    padding: 1em;
+    background-color: #f7f8f9;
+}
+
+code {
+    background-color: #f7f8f9;
+    padding: .2em .4em;
+}
+
+code, pre {
+    font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1em;
+}
+
+h1, h2 {
+    padding-bottom: 0.2em;
+    border-bottom: solid 1px #DDD
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr {
+    border-top: solid 1px #CCC;
+}
+
+th {
+    font-weight: 600;
+}
+
+td, th {
+    padding: 6px 13px;
+    border: solid 1px #CCC;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f7f8f9;
+}
+
+a {
+    color: #0567d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div.content li+li {
+    margin-top: .25em;
+}
+
+div.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+nav a {
+    margin-right: 2em;
+}
+
+header {
+    display: flex;
+    padding: .75em 1.2em;
+    background-color: #333;
+    color: #FFF
+}
+
+header a {
+    color: #FFF;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+hr {
+    height: .2em;
+    padding: 0;
+    margin: 1.5em 0;
+    border: 0;
+    background-color: #DDD;
+}
+
+footer {
+    max-width: 800px;
+    margin: 3em auto;
+    display: flex;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+}
+
+footer ul li+li {
+    margin-left: 2em;
+}

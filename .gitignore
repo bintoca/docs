@@ -1,6 +1,7 @@
 node_modules/
 
 lib/*.js
+assets/sw.js
 /index.js
 /dev.js
 /watch.js
