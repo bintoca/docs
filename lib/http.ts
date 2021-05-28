@@ -3,7 +3,11 @@ import zlib from 'zlib'
 import { html, content, render } from './md'
 
 type resp = { statusCode: number, body: string | Buffer, headers: { [header: string]: number | string } }
+const cache = {}
 export async function handler(req: { method: string, path: string, headers: { [header: string]: string | string[] | undefined }, body: Buffer }): Promise<resp> {
+    if (cache[req.path]) {
+        return cache[req.path]
+    }
     const r: resp = { statusCode: 200, body: '', headers: {} }
     try {
         switch (req.method) {
@@ -54,6 +58,9 @@ export async function handler(req: { method: string, path: string, headers: { [h
     }
     r.body = zlib.gzipSync(r.body)
     r.headers['Content-Encoding'] = 'gzip'
+    if (r.statusCode == 200) {
+        cache[req.path] = r
+    }
     return r
 }
 
