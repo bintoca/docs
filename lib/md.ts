@@ -2,6 +2,9 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import htmlStr from 'rehype-stringify'
+import gfm from 'remark-gfm'
+import slug from 'rehype-slug'
+import link from 'rehype-autolink-headings'
 import front from 'remark-frontmatter'
 import frontExt from 'remark-extract-frontmatter'
 import * as toml from '@iarna/toml'
@@ -18,7 +21,7 @@ const breadcrumb = (n: { text: string, path: string }[]) => `<div style="display
 type props = { linkText: string, title: string }
 type vfd = VFile & { data: props }
 function getVFile(path: string): vfd {
-    return unified().use(markdown).use(front, ['toml']).use(frontExt, { toml: toml.parse }).use(remark2rehype).use(htmlStr).processSync({ path, contents: fs.readFileSync(path) }) as vfd
+    return unified().use(markdown).use(gfm).use(front, ['toml']).use(frontExt, { toml: toml.parse }).use(remark2rehype).use(slug).use(link).use(htmlStr).processSync({ path, contents: fs.readFileSync(path) }) as vfd
 }
 const propsCache: { [key: string]: props } = {}
 function getProps(path: string) {

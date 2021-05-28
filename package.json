@@ -14,9 +14,12 @@
     },
     "dependencies": {
         "@iarna/toml": "^2.2.5",
+        "rehype-autolink-headings": "^5.1.0",
+        "rehype-slug": "^4.0.1",
         "rehype-stringify": "^8.0.0",
         "remark-extract-frontmatter": "^3.1.0",
         "remark-frontmatter": "^3.0.0",
+        "remark-gfm": "^1.0.0",
         "remark-parse": "^9.0.0",
         "remark-rehype": "^8.1.0",
         "unified": "^9.2.1"

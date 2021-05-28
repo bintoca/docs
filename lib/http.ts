@@ -9,9 +9,13 @@ export async function handler(req: { method: string, path: string, headers: { [h
         switch (req.method) {
             case 'GET': {
                 const assetsName = './assets' + req.path
-                const contentName = './content' + (req.path.endsWith('/') ? req.path.substring(0, req.path.length - 1) : req.path)
+                const contentName = './content' + req.path
                 const contentExist = fs.existsSync(contentName)
-                if (!req.path.endsWith('.md') && (contentExist || fs.existsSync(contentName + '.md'))) {
+                if (req.path.endsWith('/') && req.path != '/') {
+                    r.statusCode = 301
+                    r.headers['Location'] = req.path.substring(0, req.path.length - 1)
+                }
+                else if (!req.path.endsWith('.md') && (contentExist || fs.existsSync(contentName + '.md'))) {
                     r.body = render(contentName + (contentExist ? '/index.md' : '.md'), req.path)
                 }
                 else if (fs.existsSync(assetsName)) {

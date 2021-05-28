@@ -8,6 +8,10 @@ p, pre, table, ol, ul, dl {
     margin-bottom: 1em;
 }
 
+strong {
+    font-weight: 600;
+}
+
 pre {
     padding: 1em;
     background-color: #f7f8f9;
@@ -31,6 +35,10 @@ h1, h2 {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 0.5em;
+}
+
+h3, h4, h5, h6 {
+    padding-top: 1em;
 }
 
 table {
@@ -71,12 +79,13 @@ div.content li+li {
 div.content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 2em;
 }
 
 nav.bc {
     padding: 1em 0;
 }
+
 nav.bc a:last-child {
     color: #888;
 }

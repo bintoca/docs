@@ -3,4 +3,6 @@ title = "bintoca docs"
 linkText = "Docs"
 +++
 
-# Other markdown
+# Categories
+
+- [Policy](policy)
