@@ -54,7 +54,7 @@ export async function handler(req: { method: string, path: string, headers: { [h
         ct(r, req.path)
     }
     if (!r.headers['Cache-Control']) {
-        cacheControlPublic(r, 3600)
+        cacheControlPublic(r, 60 * 60 * 12)
     }
     r.body = zlib.gzipSync(r.body)
     r.headers['Content-Encoding'] = 'gzip'

@@ -14,7 +14,7 @@ import { mainCssName, mainJsName } from './http'
 
 export const html = (title: string, body: string) => `<!DOCTYPE html><html><head><meta charset="utf-8"/><title>${title}</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="${mainCssName}" rel="stylesheet"><script defer src="${mainJsName}"></script></head>
 <body><header><div style="flex:auto"><a href="/"><span style="font-weight: bold; font-size: 1.5em">bintoca docs</span></a></div><div style="display: flex; flex-direction: row-reverse; align-items: center"><div><a href="https://bintoca.com">bintoca.com</a></div></div></header>${body}
-<footer><ul><li><a href="/policy/terms">Terms</a></li><li><a href="/policy/privacy">Privacy</a></li></ul></footer></body></html>`
+<footer><ul><li><a href="/policy/terms">Terms</a></li><li><a href="/policy/privacy">Privacy</a></li><li><a href="https://bintoca.com">bintoca.com</a></li></ul></footer></body></html>`
 export const content = (c: string) => `<div class="content">${c}</div>`
 const breadcrumb = (n: { text: string, path: string }[]) => `<div style="display: flex;"><nav class="bc">${n.map(x => `<a href="${x.path}">${x.text}</a>`).join('')}</nav></div>`
 
