@@ -5,7 +5,7 @@ linkText = "Subprocessors and Cookies"
 
 ## Subprocessors and Cookies
 
-Effective date: **May 27, 2021**
+Effective date: **November 3, 2021**
 
 bintoca provides a great deal of transparency regarding how we use your data, how we collect your data, and with whom we share your data. To that end, we provide this page, which details [our subprocessors](#bintoca-subprocessors), and how we use [cookies](#cookies-on-bintoca).
 
@@ -20,7 +20,7 @@ When we share your information with third party subprocessors, such as our vendo
 | Google Apps | Internal company infrastructure | United States | United States |
 | Stripe | Payment provider | United States | United States |
 
-When we bring on a new subprocessor who handles our Users' Personal Information, or remove a subprocessor, or we change how we use a subprocessor, we will update this page. If you have questions or concerns about a new subprocessor, we'd be happy to help. Please contact us via {% data variables.contact.contact_privacy %}.
+When we bring on a new subprocessor who handles our Users' Personal Information, or remove a subprocessor, or we change how we use a subprocessor, we will update this page. If you have questions or concerns about a new subprocessor, we'd be happy to help. Please contact us via [support](mailto:support@bintoca.com).
 
 ### Cookies on bintoca
 
@@ -33,5 +33,3 @@ Since the number and names of cookies may change, the table below may be updated
 | bintoca | `__Host-session` | This cookie is used to log you in. | one year | 
 
 _*_ The **expiration** dates for the cookies listed below generally apply on a rolling basis.
-
-(!) Please note while we limit our use of third party cookies to those necessary to provide external functionality when rendering external content, certain pages on our website may set other third party cookies. For example, we may embed content, such as videos, from another site that sets a cookie. While we try to minimize these third party cookies, we can’t always control what cookies this third party content sets.

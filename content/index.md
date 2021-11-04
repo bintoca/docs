@@ -6,3 +6,4 @@ linkText = "Docs"
 # Categories
 
 - [Policy](policy)
+- [Security](security)
