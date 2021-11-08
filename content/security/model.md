@@ -33,7 +33,7 @@ package.json must exist and contain a `main` field referencing an ECMAScript mod
 
 ### Initializing the JS environment consists of:
 
-- Make private copies of primorial objects and functions needed in internal code. (e.g. String.prototype.endsWith)
+- Make private copies of primordial objects and functions needed in internal code. (e.g. String.prototype.endsWith)
 - Delete all non-approved configurable properties from the global object and its prototype chain
 - Modify configurable properties that can cause network or storage IO.
 - Report non-configurable properties of the global object to server (or service worker). These will result in dynamically appended import statements referencing proxy objects instead of the real globals.
