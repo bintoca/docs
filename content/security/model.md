@@ -3,7 +3,7 @@ title = "Security Model"
 linkText = "Security Model"
 +++
 
-# Application Security Model
+# JS Application Security Model (Prototyped but not deployed)
 
 This document explains the techniques and design choices for securing applications and data in the bintoca environment. Applications are sandboxed by syntactic and programmatic means to ensure isolation and safe sharing of data.
 
