@@ -22,6 +22,6 @@ function compile(roots, options) {
     }
 }
 
-compile(['./index.ts', './lib/dev.ts', './lib/build.ts', './assets/sw.ts', './lib/watch.ts'], { target: ts.ScriptTarget.ES2020, lib: ['lib.es2020.full.d.ts', 'lib.webworker.d.ts'], module: ts.ModuleKind.CommonJS, esModuleInterop: true, skipLibCheck: true })
+compile(['./lib/build.ts', './assets/sw.ts', './lib/watch.ts'], { target: ts.ScriptTarget.ES2020, lib: ['lib.es2020.full.d.ts', 'lib.webworker.d.ts'], module: ts.ModuleKind.CommonJS, esModuleInterop: true, skipLibCheck: true })
 
 process.exit();
