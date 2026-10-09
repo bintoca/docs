@@ -10,7 +10,7 @@ import frontExt from 'remark-extract-frontmatter'
 import * as toml from '@iarna/toml'
 import { VFile } from 'vfile'
 import fs from 'fs'
-import { mainCssName, mainJsName } from './http'
+import { mainCssName, mainJsName } from './assets'
 
 export const html = (title: string, body: string) => `<!DOCTYPE html><html><head><meta charset="utf-8"/><title>${title}</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="${mainCssName}" rel="stylesheet"><script defer src="${mainJsName}"></script></head>
 <body><header><div style="flex:auto"><a href="/"><span style="font-weight: bold; font-size: 1.5em">bintoca docs</span></a></div><div style="display: flex; flex-direction: row-reverse; align-items: center"><div><a href="https://bintoca.com">bintoca.com</a></div></div></header>${body}

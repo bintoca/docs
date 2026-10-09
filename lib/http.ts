@@ -1,6 +1,8 @@
 import fs from 'fs'
 import zlib from 'zlib'
 import { html, content, render } from './md'
+import { mainCssName, mainJsName } from './assets'
+export { mainCssName, mainJsName, sha256 } from './assets'
 
 type resp = { statusCode: number, body: string | Buffer, headers: { [header: string]: number | string } }
 const cache = {}
@@ -78,10 +80,3 @@ function contentType(path: string): string {
     return 'text/html'
 }
 function ct(r: resp, path: string) { r.headers['Content-Type'] = contentType(path) }
-
-import * as crypto from 'crypto'
-export function sha256(buf: BufferSource) {
-    return crypto.createHash('sha256').update(Buffer.from(buf instanceof ArrayBuffer ? Buffer.from(buf) : Buffer.from(buf.buffer, buf.byteOffset, buf.byteLength))).digest()
-}
-export const mainCssName = '/' + sha256(fs.readFileSync('./assets/main.css')).toString('hex').substring(0, 20) + '.css'
-export const mainJsName = '/' + sha256(fs.readFileSync('./assets/main.js')).toString('hex').substring(0, 20) + '.js'
