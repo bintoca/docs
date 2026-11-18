@@ -236,7 +236,7 @@ body {
 }
 
 .content a {
-    color: var(--button);
+    color: var(--text);
     text-decoration: none;
     text-underline-offset: 2px;
 }
@@ -402,7 +402,7 @@ nav.bc a:not(:last-child)::after {
 }
 
 .text-link {
-    color: var(--accent);
+    color: var(--text);
     font-weight: 500;
     text-decoration: none;
     text-underline-offset: 2px;
