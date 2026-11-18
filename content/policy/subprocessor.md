@@ -5,7 +5,7 @@ linkText = "Subprocessors and Cookies"
 
 ## Subprocessors and Cookies
 
-Effective date: **November 3, 2021**
+Effective date: **November 18, 2026**
 
 bintoca provides a great deal of transparency regarding how we use your data, how we collect your data, and with whom we share your data. To that end, we provide this page, which details [our subprocessors](#bintoca-subprocessors), and how we use [cookies](#cookies-on-bintoca).
 
@@ -16,20 +16,8 @@ When we share your information with third party subprocessors, such as our vendo
 | Name of Subprocessor | Description of Processing | Location of Processing | Corporate Location
 |:---|:---|:---|:---|
 | AWS Amazon | Data hosting | United States | United States |
-| Cloudflare | Network services | United States | United States |
+| Cloudflare | Network services, Data hosting | United States | United States |
 | Google Apps | Internal company infrastructure | United States | United States |
 | Stripe | Payment provider | United States | United States |
 
 When we bring on a new subprocessor who handles our Users' Personal Information, or remove a subprocessor, or we change how we use a subprocessor, we will update this page. If you have questions or concerns about a new subprocessor, we'd be happy to help. Please contact us via [support](mailto:support@bintoca.com).
-
-### Cookies on bintoca
-
-bintoca uses cookies to provide and secure our websites, as well as to analyze the usage of our websites, in order to offer you a great user experience. Please take a look at our [Privacy Policy](privacy#our-use-of-cookies-and-tracking) if you’d like more information about cookies, and on how and why we use them. 
- 
-Since the number and names of cookies may change, the table below may be updated from time to time.
-
-| Service Provider | Cookie Name | Description | Expiration* |
-|:---|:---|:---|:---|
-| bintoca | `__Host-session` | This cookie is used to log you in. | one year | 
-
-_*_ The **expiration** dates for the cookies listed below generally apply on a rolling basis.

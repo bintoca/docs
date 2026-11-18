@@ -5,7 +5,7 @@ linkText = "Privacy"
 
 ## Privacy Policy
 
-Effective date: May 27, 2021
+Effective date: November 18, 2026
 
 Thanks for entrusting THOMPSON'S WORLD LLC (“bintoca”, “we”) with your data and personal information. Holding on to your private information is a serious responsibility, and we want you to know how we're handling it.
 
@@ -96,7 +96,7 @@ We may use your information for the following purposes:
 - We use [Usage Information](#usage-information) and [Device Information](#device-information) to better understand how our Users use bintoca and to improve our Website and Service.
 - We may use your User Personal Information if it is necessary for security purposes or to investigate possible fraud or attempts to harm bintoca or our Users.
 - We may use your User Personal Information to comply with our legal obligations, protect our intellectual property, and enforce our [Terms of Service](terms).
-- We limit our use of your User Personal Information to the purposes listed in this Privacy Policy. If we need to use your User Personal Information for other purposes, we will ask your permission first. You can always see what information we have, how we're using it, and what permissions you have given us in your [user profile](https://bintoca.com/settings).
+- We limit our use of your User Personal Information to the purposes listed in this Privacy Policy. If we need to use your User Personal Information for other purposes, we will ask your permission first. You can always see what information we have, how we're using it, and what permissions you have given us in your user profile.
 
 #### Our legal bases for processing information
 
@@ -107,7 +107,7 @@ To the extent that our processing of your User Personal Information is subject t
   * If you have a paid Account with us, we collect and process additional [Payment Information](#payment-information) on the basis of performing that contract.
   * When you buy or sell an application listed on our Marketplace or, we process [Payment Information](#payment-information) and additional elements in order to perform the contract that applies to those services.
 - Consent:
-  * We rely on your consent to use your User Personal Information under the following circumstances: when you fill out the information in your [user profile](https://bintoca.com/settings); when you decide to participate in a bintoca training, research project, beta program, or survey; and for marketing purposes, where applicable. All of this User Personal Information is entirely optional, and you have the ability to access, modify, and delete it at any time. While you are not able to delete your email address entirely, you can make it private. You may withdraw your consent at any time.
+  * We rely on your consent to use your User Personal Information under the following circumstances: when you fill out the information in your user profile; when you decide to participate in a bintoca training, research project, beta program, or survey; and for marketing purposes, where applicable. All of this User Personal Information is entirely optional, and you have the ability to access, modify, and delete it at any time. While you are not able to delete your email address entirely, you can make it private. You may withdraw your consent at any time.
 - Legitimate Interests:
   * Generally, the remainder of the processing of User Personal Information we perform is necessary for the purposes of our legitimate interest, for example, for legal compliance purposes, security purposes, or to maintain ongoing confidentiality, integrity, availability, and resilience of bintoca’s systems, Website, and Service.
 - If you would like to request deletion of data we process on the basis of consent or if you object to our processing of personal information, please use our [Support](mailto:support@bintoca.com).
@@ -135,8 +135,6 @@ We may share User Personal Information if we are involved in a merger, sale, or 
 We share certain aggregated, non-personally identifying information with others about how our users, collectively, use bintoca, or how our users respond to our other offerings, such as our conferences or events.
 
 We **do not** sell your User Personal Information for monetary or other consideration.
-
-Please note: The California Consumer Privacy Act of 2018 (“CCPA”) requires businesses to state in their privacy policy whether or not they disclose personal information in exchange for monetary or other valuable consideration. While CCPA only covers California residents, we voluntarily extend its core rights for people to control their data to _all_ of our users, not just those who live in California. You can learn more about the CCPA and how we comply with it [here](california-privacy).
 
 ### Storage contents
 
@@ -168,7 +166,7 @@ Please see more about [User Personal Information in public storage](#public-info
 
 Many of bintoca services and features are public-facing. If your content is public-facing, third parties may access and use it in compliance with our Terms of Service, such as by viewing your profile or storage or pulling data via our API. We do not sell that content; it is yours. However, we do allow third parties, such as research organizations or archives, to compile public-facing bintoca information. Other third parties, such as data brokers, have been known to scrape bintoca and compile data as well.
 
-Your User Personal Information associated with your content could be gathered by third parties in these compilations of bintoca data. If you do not want your User Personal Information to appear in third parties’ compilations of bintoca data, please do not make your User Personal Information publicly available and be sure to [configure your email address to be private in your user profile](https://bintoca.com/settings).
+Your User Personal Information associated with your content could be gathered by third parties in these compilations of bintoca data. If you do not want your User Personal Information to appear in third parties’ compilations of bintoca data, please do not make your User Personal Information publicly available and be sure to configure your email address to be private in your user profile.
 
 If you would like to compile bintoca data, you must comply with our Terms of Service regarding [information usage](terms#5-information-usage-restrictions) and [privacy](terms#6-privacy), and you may only use any public-facing User Personal Information you gather for the purpose for which our user authorized it. For example, where a bintoca user has made an email address public-facing for the purpose of identification and attribution, do not use that email address for the purposes of sending unsolicited emails to users or selling User Personal Information, such as to recruiters, headhunters, and job boards, or for commercial advertising. We expect you to reasonably secure any User Personal Information you have gathered from bintoca, and to respond promptly to complaints, removal requests, and "do not contact" requests from bintoca or bintoca users.
 
@@ -199,7 +197,7 @@ You can also add applications from bintoca, or other application and account fea
 
 ### How you can access and control the information we collect
 
-If you're already a bintoca user, you may access, update, alter, or delete your basic user profile information by [editing your user profile](https://bintoca.com/settings). You can control the information we collect about you by limiting what information is in your profile, by keeping your information current, or by contacting [bintoca Support](mailto:support@bintoca.com).
+If you're already a bintoca user, you may access, update, alter, or delete your basic user profile information by editing your user profile. You can control the information we collect about you by limiting what information is in your profile, by keeping your information current, or by contacting [bintoca Support](mailto:support@bintoca.com).
 
 If bintoca processes information about you, such as information [bintoca receives from third parties](#information-we-collect-from-third-parties), and you do not have an account, then you may, subject to applicable law, access, update, alter, delete, or object to the processing of your personal information by contacting [bintoca Support](mailto:support@bintoca.com).
 
@@ -211,7 +209,7 @@ As a bintoca User, you can always take your data with you.
 
 Generally, bintoca retains User Personal Information for as long as your account is active or as needed to provide you services.
 
-If you would like to cancel your account or delete your User Personal Information, you may do so in your [user profile](https://bintoca.com/settings). We retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements, but barring legal requirements, we will delete your full profile (within reason) within 90 days of your request. You may contact [bintoca Support](mailto:support@bintoca.com) to request the erasure of the data we process on the basis of consent within 30 days.
+If you would like to cancel your account or delete your User Personal Information, you may do so in your user profile. We retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements, but barring legal requirements, we will delete your full profile (within reason) within 90 days of your request. You may contact [bintoca Support](mailto:support@bintoca.com) to request the erasure of the data we process on the basis of consent within 30 days.
 
 After an account has been deleted, certain data, such as contributions to other Users' storage may remain.
 
@@ -224,8 +222,6 @@ bintoca only uses strictly necessary cookies. Cookies are small text files that 
 We use cookies solely to provide, secure, and improve our service. For example, we use them to keep you logged in, remember your preferences, identify your device for security purposes, analyze your use of our service, compile statistical reports, and provide information for future development of bintoca. We use our own cookies for analytics purposes, but do not use any third-party analytics service providers.
 
 By using our service, you agree that we can place these types of cookies on your computer or device. If you disable your browser or device’s ability to accept these cookies, you will not be able to log in or use our service.
-
-We provide more information about [cookies on bintoca](subprocessor#cookies-on-bintoca) on our [bintoca Subprocessors and Cookies](subprocessor) page that describes the cookies we set, the needs we have for those cookies, and the expiration of such cookies.
 
 ### How bintoca secures your information
 
@@ -261,9 +257,9 @@ In particular:
 
 ### How we communicate with you
 
-We use your email address to communicate with you, if you've said that's okay, **and only for the reasons you’ve said that’s okay**. For example, if you contact our Support team with a request, we respond to you via email. You have a lot of control over how your email address is used and shared on and through bintoca. You may manage your communication preferences in your [user profile](https://bintoca.com/settings).
+We use your email address to communicate with you, if you've said that's okay, **and only for the reasons you’ve said that’s okay**. For example, if you contact our Support team with a request, we respond to you via email. You have a lot of control over how your email address is used and shared on and through bintoca. You may manage your communication preferences in your user profile.
 
-Depending on your [email settings](https://bintoca.com/settings), bintoca may occasionally send notification emails about new features, requests for feedback, important policy changes, or to offer customer support. We also send marketing emails, based on your choices and in accordance with applicable laws and regulations. There's an “unsubscribe” link located at the bottom of each of the marketing emails we send you. Please note that you cannot opt out of receiving important communications from us, such as emails from our Support team or system emails, but you can configure your notifications settings in your profile to opt out of other communications.
+Depending on your email settings, bintoca may occasionally send notification emails about new features, requests for feedback, important policy changes, or to offer customer support. We also send marketing emails, based on your choices and in accordance with applicable laws and regulations. There's an “unsubscribe” link located at the bottom of each of the marketing emails we send you. Please note that you cannot opt out of receiving important communications from us, such as emails from our Support team or system emails, but you can configure your notifications settings in your profile to opt out of other communications.
 
 Our emails may contain a pixel tag, which is a small, clear image that can tell us whether or not you have opened an email and what your IP address is. We use this pixel tag to make our email more effective for you and to make sure we’re not sending you unwanted email.
 
@@ -285,3 +281,61 @@ This Privacy Policy is licensed under this [Creative Commons Zero license](https
 
 ### Contacting bintoca
 Questions regarding bintoca's Privacy Policy or information practices should be directed to our [support](mailto:support@bintoca.com).
+
+## US State Specific Information
+
+This section provides extra information specifically for residents of certain US states that have distinct data privacy laws and regulations. These laws may grant specific rights to residents of these states when the laws come into effect. This section uses the term “personal information” as an equivalent to the term “Personal Data.”
+
+### Privacy Rights
+
+These rights are common to the US State privacy laws:
+
+* Right to Knowledge and Correction: You have the right to request details on the specific personal information we’ve collected about you and the right to correct inaccurate information. You can exercise this right by contacting us. You can also access and edit basic account information in your settings.
+* Right to Know Data Recipients: We share your information with service providers for legitimate business operations, such as data storage and hosting. For more details, please see “Sharing Your Information” below.
+* Right to request Deletion: You reserve the right to request the deletion of your data, barring a few exceptions. Such exceptions include circumstances where we are required to retain data to comply with legal obligations, detect fraudulent activity, investigate reports of abuse or other violations of our Terms of Service, or rectify security issues. Upon receiving your verified request, we will promptly delete your personal information (unless an exception applies), and instruct our service providers to do the same. We employ brief retention terms by design.
+* Right to a Timely Response: You are allowed to make two free requests in any 12-month period. We commit to responding to your request within 45 days. In complex cases, we may extend our response time by an additional 45 days.
+* Non-Discrimination: We will not hold it against you when you exercise any of your rights. On the contrary, we encourage you to review your privacy settings closely and contact us with any questions.
+
+### Notice of Collection of Personal Information
+
+We may collect various categories of personal information about our website visitors and users of "Services" which includes bintoca applications, software, products, or services. That information includes identifiers/contact information, demographic information, payment information, commercial information, internet or electronic network activity information, geolocation data, audio, electronic, visual, or similar information, and inferences drawn from such information.
+
+We collect this information for various purposes. This includes identifying accessibility gaps and offering targeted support, fostering diversity and representation, providing services, troubleshooting, conducting business operations such as billing and security, improving products and supporting research, communicating important information, ensuring personalized experiences, and promoting safety and security.
+
+### Exercising your Privacy Rights
+
+To make an access, deletion, correction, or opt-out request, please send an email to support\[at]bintoca\[dot]com and follow the instructions provided. We may need to verify your identity before processing your request. If you choose to use an authorized agent to submit a request on your behalf, please ensure they have your signed permission or power of attorney as required.
+
+### California
+
+#### Mandatory Disclosures
+
+We also make the following disclosures for purposes of compliance with California privacy law:
+
+* We collected the following categories of personal information in the last 12 months: identifiers/contact information, demographic information (such as gender), payment card information associated with you, commercial information, Internet or other electronic network activity information, geolocation data, audio, electronic, visual or similar information, and inferences drawn from the above.
+* The sources of personal information from whom we collected are: directly from you, automatically or from third parties.
+* The business or commercial purposes of collecting personal information are as summarized above and in our Privacy Statement under Processing Purposes.
+* We disclosed the following categories of personal information for a business purpose in the last 12 months: identifiers/contact information, demographic information (such as gender and rough geographic location), payment information, commercial information, Internet or other electronic network activity information, geolocation data, audio, electronic, visual or similar information, and inferences drawn from the above. We disclosed each category to third-party business partners and service providers.
+* As defined by applicable law, we did not “share” personal information in the last 12 months.
+* We do not “sell” or “share” the personal information of known minors under 16 years of age.
+
+#### Shine the Light Act
+
+Under California Civil Code section 1798.83, also known as the “Shine the Light” law, California residents who have provided personal information to a business with which the individual has established a business relationship for personal, family, or household purposes (“California Customers”) may request information about whether the business has disclosed personal information to any third parties for the third parties’ direct marketing purposes. Please be aware that we do not disclose personal information to any third parties for their direct marketing purposes as defined by this law. California Customers may request further information about our compliance with this law by emailing (support\[at]bintoca\[dot]com). Please note that businesses are required to respond to one request per California Customer each year and may not be required to respond to requests made by means other than through the designated email address.
+
+#### Removal of Content
+
+California residents under the age of 18 who are registered users of online sites, services, or applications have a right under California Business and Professions Code Section 22581 to remove, or request and obtain removal of, content or information they have publicly posted. To request that we remove such content or information, please send a detailed description of the specific content or information you wish to have removed to support\[at]bintoca\[dot]com. Please be aware that your request does not guarantee complete or comprehensive removal of content or information posted online and that the law may not permit or require removal in certain circumstances. If you have any questions about our privacy practices with respect to California residents, please send an email to support\[at]bintoca\[dot]com.
+
+We value the trust you place in us and are committed to handling your personal information with care and respect. If you have any questions or concerns about our privacy practices, please email our Data Protection Officer at support\[at]bintoca\[dot]com.
+
+### Colorado/Connecticut/Virginia
+
+If you live in Colorado, Connecticut, or Virginia you have some additional rights:
+
+* If we deny your rights request, you have the right to appeal that decision. We will provide you with the necessary information to submit an appeal at that time.
+* You have the right to opt out of profiling in furtherance of decisions that produce legal or similarly significant effects concerning the consumer. bintoca does not engage in such profiling as defined by Colorado law, so there’s no need to opt out.
+
+### Nevada
+
+We do not sell your covered information, as defined under Chapter 603A of the Nevada Revised Statutes. If you still have questions about your covered information or anything else in our Privacy Statement, please send an email to support\[at]bintoca\[dot]com.

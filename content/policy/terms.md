@@ -30,7 +30,7 @@ Thank you for using bintoca! We're happy you're here. Please read this Terms of 
 | [R. Miscellaneous](#r-miscellaneous) | Please see this section for legal details including our choice of law. |
 
 ### The bintoca Terms of Service
-Effective date: May 27, 2021
+Effective date: November 18, 2026
 
 
 ### A. Definitions
@@ -268,7 +268,7 @@ Our pricing and payment terms are available at [bintoca.com/pricing](https://bin
 - We will immediately bill you when you upgrade from the free plan to any paying plan.
 - If you change from a monthly billing plan to a yearly billing plan, bintoca will bill you for a full year at the next monthly billing date.
 - If you upgrade to a higher level of service, we will bill you for the upgraded plan immediately.
-- You may change your level of service at any time by [choosing a plan option](https://bintoca.com/pricing) or going into your [Billing settings](https://bintoca.com/settings/billing). If you choose to downgrade your Account, you may lose access to Content, features, or capacity of your Account. Please see our section on [Cancellation](#l-cancellation-and-termination) for information on getting a copy of that Content.
+- You may change your level of service at any time by [choosing a plan option](https://bintoca.com/pricing). If you choose to downgrade your Account, you may lose access to Content, features, or capacity of your Account. Please see our section on [Cancellation](#l-cancellation-and-termination) for information on getting a copy of that Content.
 
 #### 3. Billing Schedule; No Refunds
 **Payment Based on Plan** For monthly or yearly payment plans, the Service is billed in advance on a monthly or yearly basis respectively and is non-refundable. There will be no refunds or credits for partial months of service, downgrade refunds, or refunds for months unused with an open Account; however, the service will remain active for the length of the paid billing period. In order to treat everyone equally, no exceptions will be made.
@@ -287,7 +287,7 @@ You are responsible for all fees, including taxes, associated with your use of t
 **Short version:** *You may close your Account at any time. If you do, we'll treat your information responsibly.*
 
 #### 1. Account Cancellation
-It is your responsibility to properly cancel your Account with bintoca. You can cancel your Account at any time by going into your Settings in the global navigation bar at the top of the screen. The Account screen provides a simple, no questions asked cancellation link. We are not able to cancel Accounts in response to an email or phone request.
+It is your responsibility to properly cancel your Account with bintoca. You can cancel your Account at any time through the website. The Account screen provides a simple, no questions asked cancellation link. We are not able to cancel Accounts in response to an email or phone request.
 
 #### 2. Upon Cancellation
 We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements, but barring legal requirements, we will delete your full profile and the Content of your storage within 90 days of cancellation or termination. This information can not be recovered once your Account is cancelled.
