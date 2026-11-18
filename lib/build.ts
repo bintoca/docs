@@ -10,6 +10,7 @@ fs.mkdirSync(outDir, { recursive: true })
 prerender(outDir)
 
 fs.copyFileSync('./assets/favicon.ico', path.join(outDir, 'favicon.ico'))
+fs.copyFileSync('./assets/bintoca.svg', path.join(outDir, 'bintoca.svg'))
 fs.copyFileSync('./assets/main.css', path.join(outDir, mainCssName.substring(1)))
 fs.copyFileSync('./assets/main.js', path.join(outDir, mainJsName.substring(1)))
 if (fs.existsSync('./assets/sw.js')) {
