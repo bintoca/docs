@@ -19,7 +19,7 @@ export const html = (title: string, body: string) => `<!DOCTYPE html><html lang=
 <main class="shell">${body}</main>
 <footer class="site-footer"><nav class="footer-columns" aria-label="Footer">
 <div class="footer-column"><h2 class="footer-heading">Product</h2><ul class="footer-links"><li><a class="text-link" href="https://bintoca.com/pricing">Pricing</a></li></ul></div>
-<div class="footer-column"><h2 class="footer-heading">Resources</h2><ul class="footer-links"><li><a class="text-link" href="/product">Product</a></li><li><a class="text-link" href="/">Documentation</a></li><li><a class="text-link" href="/security">Security</a></li></ul></div>
+<div class="footer-column"><h2 class="footer-heading">Resources</h2><ul class="footer-links"><li><a class="text-link" href="/product">Documentation</a></li><li><a class="text-link" href="/security">Security</a></li></ul></div>
 <div class="footer-column"><h2 class="footer-heading">Legal</h2><ul class="footer-links"><li><a class="text-link" href="/policy/terms">Terms of Service</a></li><li><a class="text-link" href="/policy/privacy">Privacy Policy</a></li></ul></div>
 <div class="footer-column"><h2 class="footer-heading">Social</h2><ul class="footer-links"><li><a class="text-link" href="https://github.com/bintoca">GitHub</a></li><li><a class="text-link" href="https://x.com/AlexTWorld">X</a></li></ul></div>
 </nav><p class="footer-note">© ${new Date().getUTCFullYear()} THOMPSON'S WORLD LLC</p></footer>
