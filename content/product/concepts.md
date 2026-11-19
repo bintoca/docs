@@ -41,8 +41,10 @@ A **rule** grants access to part of a workspace for specific HTTP methods.
 | Part | Meaning |
 |---|---|
 | URL | The absolute URL path the rule applies to. |
-| Wildcard flag | Structured match of that URL and sub-paths. |
+| Wildcard flag | Boundary-aware prefix match of that URL, subpaths, and query strings. |
 | Methods | The HTTP methods the rule allows, such as `GET`, `PUT`, or `DELETE`. |
+
+A wildcard matches at `/` and `?` boundaries, not in the middle of a word. See [How wildcard matching works](permissions#how-wildcard-matching-works).
 
 ## Session
 

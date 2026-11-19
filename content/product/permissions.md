@@ -51,6 +51,36 @@ To edit an existing group, select it from the list.
 
 You can add multiple rules to one group. A session that uses the group receives all of them.
 
+## How wildcard matching works
+
+Wildcard is not a glob and does not use `*`. It is a boundary-aware prefix match.
+
+A request matches a wildcard rule when:
+
+- the request URL is exactly the rule URL;
+- the rule URL ends with `/` or `?` and the request URL starts with it; or
+- the next character after the rule URL is `/` or `?`.
+
+This means a wildcard covers subpaths and query strings at a path or query boundary, but it does not match a longer word that happens to start with the same characters. `?` is the query separator, not a single-character wildcard.
+
+For example, with `https://myapp-yourname.bintoca.io/` as the workspace URL, the suffix `assets/` becomes `https://myapp-yourname.bintoca.io/assets/`, and the suffix `search?` becomes `https://myapp-yourname.bintoca.io/search?`.
+
+| Suffix after the workspace URL | Matches | Does not match |
+|---|---|---|
+| *(empty)* | Every URL in the workspace. | — |
+| `assets` | `/assets`, `/assets/`, `/assets/app.js`, `/assets?v=2` | `/assets-old`, `/assets.json` |
+| `assets/` | `/assets/`, `/assets/app.js`, `/assets/?v=2` | `/assets` |
+| `search?` | `/search?q=1`, `/search?` | `/search`, `/search/help` |
+| `data.json` | `/data.json`, `/data.json?download=1`, `/data.json/` | `/data.json.bak` |
+
+Examples:
+
+- **Whole workspace:** wildcard with an empty suffix. This matches `/`, `/app.js`, `/assets/logo.png`, and `/search?q=1`.
+- **A directory and everything below it:** wildcard `assets/`. The trailing `/` makes `/assets/` itself and every subpath match; `/assets` without the slash does not.
+- **A path and everything below it, including the path itself:** wildcard `assets` (no trailing slash). This also matches `/assets` and `/assets?cache=1`.
+- **Any query string on one path:** wildcard `search?`. This matches `/search?q=1` and `/search?sort=new`, but not `/search` without a query and not `/search/help`.
+- **One exact URL:** leave wildcard clear (Path). A path rule matches the full URL exactly, including its query string.
+
 ## Examples
 
 | Goal | Rule |
