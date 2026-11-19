@@ -162,6 +162,111 @@ body {
     padding: 24px 0 48px;
 }
 
+/* Product documentation layout */
+
+.docs-layout {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: 24px;
+}
+
+.docs-nav-title {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.docs-nav-group + .docs-nav-group {
+    margin-top: 20px;
+}
+
+.docs-nav-group-title {
+    margin: 0 0 6px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.docs-nav ul {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.docs-nav a {
+    display: block;
+    padding: 6px 8px;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    text-decoration: none;
+}
+
+.docs-nav a:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.docs-nav a[aria-current="page"] {
+    background: var(--surface-muted);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.docs-body .content {
+    max-width: 50rem;
+    margin: 0;
+}
+
+.docs-pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 50rem;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.docs-pager-link {
+    color: var(--text);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.docs-pager-link:hover {
+    text-decoration: underline;
+}
+
+.docs-pager-label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.docs-pager-next {
+    margin-left: auto;
+    text-align: right;
+}
+
 /* Markdown */
 
 .content h1,
@@ -417,6 +522,44 @@ nav.bc a:not(:last-child)::after {
     color: var(--text-muted);
     font-size: 0.8125rem;
     text-align: left;
+}
+
+@media (max-width: 900px) {
+    .docs-layout {
+        display: block;
+    }
+
+    .docs-sidebar {
+        position: static;
+        margin-bottom: 24px;
+    }
+
+    .docs-nav-title {
+        margin-bottom: 8px;
+    }
+
+    .docs-nav-group + .docs-nav-group {
+        margin-top: 0;
+    }
+
+    .docs-nav-group-title {
+        display: none;
+    }
+
+    .docs-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .docs-nav a {
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+    }
+
+    .docs-body .content {
+        max-width: none;
+    }
 }
 
 @media (max-width: 560px) {

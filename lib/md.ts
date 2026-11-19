@@ -11,6 +11,7 @@ import * as toml from '@iarna/toml'
 import { VFile } from 'vfile'
 import fs from 'fs'
 import { mainCssName, mainJsName } from './assets'
+import { isProductPath, productPager, productSidebar } from './nav'
 
 export const html = (title: string, body: string) => `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>${title}</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.ico" /><link href="${mainCssName}" rel="stylesheet"><script defer src="${mainJsName}"></script></head>
 <body><div class="page page-docs">
@@ -18,7 +19,7 @@ export const html = (title: string, body: string) => `<!DOCTYPE html><html lang=
 <main class="shell">${body}</main>
 <footer class="site-footer"><nav class="footer-columns" aria-label="Footer">
 <div class="footer-column"><h2 class="footer-heading">Product</h2><ul class="footer-links"><li><a class="text-link" href="https://bintoca.com/pricing">Pricing</a></li></ul></div>
-<div class="footer-column"><h2 class="footer-heading">Resources</h2><ul class="footer-links"><li><a class="text-link" href="/">Documentation</a></li><li><a class="text-link" href="/security">Security</a></li></ul></div>
+<div class="footer-column"><h2 class="footer-heading">Resources</h2><ul class="footer-links"><li><a class="text-link" href="/product">Product</a></li><li><a class="text-link" href="/">Documentation</a></li><li><a class="text-link" href="/security">Security</a></li></ul></div>
 <div class="footer-column"><h2 class="footer-heading">Legal</h2><ul class="footer-links"><li><a class="text-link" href="/policy/terms">Terms of Service</a></li><li><a class="text-link" href="/policy/privacy">Privacy Policy</a></li></ul></div>
 <div class="footer-column"><h2 class="footer-heading">Social</h2><ul class="footer-links"><li><a class="text-link" href="https://github.com/bintoca">GitHub</a></li><li><a class="text-link" href="https://x.com/AlexTWorld">X</a></li></ul></div>
 </nav><p class="footer-note">© ${new Date().getUTCFullYear()} THOMPSON'S WORLD LLC</p></footer>
@@ -48,5 +49,9 @@ export function render(path: string, urlPath: string) {
     }
     const vf = getVFile(path)
     nav.push({ text: vf.data.linkText, path: urlPath })
-    return html(vf.data.title, content((urlPath != '/' ? breadcrumb(nav) : '') + vf.contents as string))
+    const body = content((urlPath != '/' ? breadcrumb(nav) : '') + vf.contents as string)
+    if (isProductPath(urlPath)) {
+        return html(vf.data.title, `<div class="docs-layout">${productSidebar(urlPath)}<div class="docs-body">${body}${productPager(urlPath)}</div></div>`)
+    }
+    return html(vf.data.title, body)
 }
