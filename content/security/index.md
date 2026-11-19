@@ -5,4 +5,4 @@ linkText = "Security"
 
 # Security
 
-- [Vulnerability Disclosure](disclosure)
+- [Vulnerability Disclosure](security/disclosure)
