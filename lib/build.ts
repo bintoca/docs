@@ -11,6 +11,9 @@ prerender(outDir)
 
 fs.copyFileSync('./assets/favicon.ico', path.join(outDir, 'favicon.ico'))
 fs.copyFileSync('./assets/bintoca.svg', path.join(outDir, 'bintoca.svg'))
+const wellKnownDir = path.join(outDir, '.well-known')
+fs.mkdirSync(wellKnownDir, { recursive: true })
+fs.copyFileSync('./assets/security.txt', path.join(wellKnownDir, 'security.txt'))
 fs.copyFileSync('./assets/main.css', path.join(outDir, mainCssName.substring(1)))
 fs.copyFileSync('./assets/main.js', path.join(outDir, mainJsName.substring(1)))
 if (fs.existsSync('./assets/sw.js')) {
