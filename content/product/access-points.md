@@ -74,7 +74,18 @@ The account page shows the signed-in user's details:
 - whether the account is active; and
 - when the account was created.
 
+The account page also contains the controls for deleting the access point.
+
 Multi-factor authentication and passkeys are not available yet. If you need to change the email address associated with an access point, contact support.
+
+## Delete an access point
+
+Deleting an access point permanently removes the account and its settings. It cannot be undone.
+
+1. Delete every workspace first. The **Delete access point** button stays disabled while the access point owns a workspace. See [Delete a workspace](workspaces#delete-a-workspace).
+2. Open **My Account**.
+3. Select **Delete access point**.
+4. Type `DELETE` and confirm.
 
 ## Feedback
 

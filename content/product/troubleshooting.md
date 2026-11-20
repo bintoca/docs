@@ -46,25 +46,25 @@ The session is valid, but no rule allows the request.
 
 ## 405 Method Not Allowed
 
-- Supported methods are `GET`, `HEAD`, `PUT`, `PUTHTML`, `DELETE`, and `POST` with `X-HTTP-Method-Override: PUTHTML`.
+- Supported methods are `GET`, `HEAD`, `PUT`, `PUTX`, `DELETE`, and `POST` with `X-HTTP-Method-Override: PUTX`.
 - `POST` without the override returns `405`.
 - `PATCH` is not supported.
 - Check the `Allow` response header for the methods the endpoint accepts.
 
 ## 415 Unsupported Media Type
 
-`PUT` does not accept `text/html`. Upload HTML with:
+`PUT` does not accept active content. Use `PUTX` for HTML, XHTML, SVG, XML, XSLT, and JavaScript media types:
 
 ```bash
 curl -X POST \
   -H "Authorization: Bearer $BINTOCA_TOKEN" \
-  -H "X-HTTP-Method-Override: PUTHTML" \
+  -H "X-HTTP-Method-Override: PUTX" \
   -H "Content-Type: text/html" \
   --data-binary @index.html \
   "https://myapp-yourname.bintoca.io/index.html"
 ```
 
-The permission group needs the `PUTHTML` method.
+The permission group needs the `PUTX` method. See [Files and HTTP](files-and-http) for the full list of active media types.
 
 ## 412 Precondition Failed or 304 Not Modified
 
@@ -79,12 +79,22 @@ The session or endpoint is rate limited. Wait for the delay in the `Retry-After`
 
 ## I cannot delete a workspace
 
-A workspace cannot be deleted while a permission group rule refers to it. The error lists the groups that use it.
+A workspace cannot be deleted while a permission group rule refers to it or while an active session includes a rule for it. The error lists the groups and sessions that use it.
 
 1. Open **Permissions**.
 2. Edit each listed group.
 3. Remove or change the rule that targets the workspace.
-4. Delete the workspace again.
+4. Open **Sessions** and revoke each listed session.
+5. Delete the workspace again.
+
+## I cannot delete my access point
+
+The **Delete access point** button on **My Account** stays disabled while the access point owns any workspace.
+
+1. Open **Workspaces**.
+2. Delete every workspace. If a workspace cannot be deleted, clear its permission-group rules and revoke the listed sessions first. See [I cannot delete a workspace](#i-cannot-delete-a-workspace).
+3. Open **My Account**.
+4. Select **Delete access point**, type `DELETE`, and confirm.
 
 ## The workspace or access point name is rejected
 

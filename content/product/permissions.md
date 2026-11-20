@@ -24,8 +24,10 @@ The workspace selector already includes the trailing `/` in the workspace URL. E
 Creating a workspace automatically creates a group named `<workspace> - full access`. It gives the owner access to the whole workspace with these methods:
 
 ```
-GET, POST, PUT, PUTHTML, PATCH, DELETE
+GET, POST, PUT, PUTX, PATCH, DELETE
 ```
+
+`PUTX` is required to upload active content such as HTML, SVG, XHTML, XML, XSLT, or JavaScript. `PUT` handles everything else.
 
 Use the narrowest rule that works for your session. See [Files and HTTP](files-and-http) for the methods the workspace supports.
 
@@ -87,9 +89,9 @@ Examples:
 |---|---|
 | Let a session read the workspace homepage | Path with empty suffix, method `GET` |
 | Let a browser load CSS, JavaScript, and images | Wildcard with empty suffix, methods `GET` |
-| Let an app upload files but not delete them | Wildcard with empty suffix, methods `PUT`, `PUTHTML` |
+| Let an app upload files but not delete them | Wildcard with empty suffix, methods `PUT`, `PUTX` |
 | Let a script read and replace one JSON file | Path `data.json`, methods `GET`, `PUT` |
-| Give an integration full control | Wildcard with empty suffix, methods `GET`, `PUT`, `PUTHTML`, `DELETE` |
+| Give an integration full control | Wildcard with empty suffix, methods `GET`, `PUT`, `PUTX`, `DELETE` |
 
 ## Linked rules
 

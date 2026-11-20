@@ -32,9 +32,11 @@ Create the token from **Sessions** in your access point. See [Sessions](sessions
 |---|---|---|
 | `GET` | Read a file. | Supports conditional requests and byte ranges. |
 | `HEAD` | Read headers without a body. | Allowed whenever `GET` is allowed. |
-| `PUT` | Write a file. | Rejects `text/html` with `415`. No query string. |
-| `PUTHTML` | Write any file, including HTML. | Send it as `POST` with `X-HTTP-Method-Override: PUTHTML`. |
+| `PUT` | Write a file. | Rejects active content with `415`. No query string. |
+| `PUTX` | Write any file, including active content. | Send it as `POST` with `X-HTTP-Method-Override: PUTX`. |
 | `DELETE` | Delete a file. | Returns `204` even if the file does not exist. |
+
+`PUTX` is the upload method for active content. It accepts any content type. Use `PUT` for everything else.
 
 `POST` and `PATCH` will be enabled with future product features.
 
@@ -49,7 +51,7 @@ A missing file returns `404`. If the workspace has never stored a file at `/`, t
 
 ## Upload a text or binary file
 
-Use `PUT` for any file that is not HTML:
+Use `PUT` for any file that is not active content:
 
 ```bash
 curl -X PUT \
@@ -61,22 +63,31 @@ curl -X PUT \
 
 A successful write returns `204 No Content`.
 
-The permission group must include the `PUT` method for the destination URL. `PUT` and `PUTHTML` requests with a query string return `400`.
+The permission group must include the `PUT` method for the destination URL. `PUT` and `PUTX` requests with a query string return `400`.
 
-## Upload HTML
+## Upload active content
 
-`PUT` refuses `text/html` so that data uploading can be allowed without causing cross site scripting issues by uploading HTML. Upload HTML with `PUTHTML`:
+`PUT` refuses active content so that ordinary uploads can be allowed without allowing scripts to run from a workspace origin. The active media types are:
+
+- `text/html`
+- `application/xhtml+xml`
+- `image/svg+xml`
+- `application/xml` and `text/xml`
+- `application/xslt+xml` and `text/xsl`
+- `text/javascript`, `application/javascript`, `text/ecmascript`, and `application/ecmascript`
+
+Upload these files with `PUTX`:
 
 ```bash
 curl -X POST \
   -H "Authorization: Bearer $BINTOCA_TOKEN" \
-  -H "X-HTTP-Method-Override: PUTHTML" \
+  -H "X-HTTP-Method-Override: PUTX" \
   -H "Content-Type: text/html; charset=utf-8" \
   --data-binary @index.html \
   "$WORKSPACE/index.html"
 ```
 
-The permission group must include `PUTHTML`, not `PUT`.
+The permission group must include `PUTX`, not `PUT`. `PUTX` accepts any content type, so the same request works for SVG, XHTML, XML, XSLT, and JavaScript files.
 
 ## Delete a file
 
@@ -134,7 +145,7 @@ The format is:
 /.well-known/easy-proxy/<scheme>/<target-workspace-host>/<port>/<path>
 ```
 
-HTML returned through easy proxy is served as `text/plain` so remote markup cannot run in the outer workspace's origin. Writes through an alias apply to the target workspace path and use the target workspace's rules.
+Active content returned through easy proxy — HTML, XHTML, SVG, XML, XSLT, and JavaScript — is served as `text/plain` so remote markup or scripts cannot run in the outer workspace's origin. Writes through an alias apply to the target workspace path and use the target workspace's rules. Use `PUTX` when writing active content through an alias.
 
 ## Status codes
 
@@ -150,7 +161,7 @@ HTML returned through easy proxy is served as `text/plain` so remote markup cann
 | `404` | The file or workspace was not found. |
 | `405` | The method is not supported. |
 | `412` | A conditional request failed. |
-| `415` | `PUT` was used with `text/html`. Use `PUTHTML`. |
+| `415` | `PUT` was used with active content. Use `PUTX`. |
 | `429` | The request was rate limited. Retry later. |
 | `500` | The request could not be completed. |
 

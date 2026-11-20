@@ -62,9 +62,7 @@ The starter page is a convenience, not a template. It is not stored in your work
 2. Select **Delete** next to the workspace.
 3. Type `DELETE` to confirm.
 
-A workspace cannot be deleted while a permission group rule refers to it. If deletion is blocked, the message lists the groups that use the workspace. Remove or update those rules, then try again.
-
-Deletion removes the workspace from your access point and schedules its stored files for cleanup. This cannot be undone. Workspaces shared with another access point are also affected.
+A workspace cannot be deleted while a permission group rule refers to it or while an active session includes a rule for it. 
 
 ## Limits
 

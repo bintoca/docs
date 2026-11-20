@@ -16,7 +16,7 @@ These guides describe the current beta. Features and limits may change.
 
 ## Manage your account
 
-- [Access points](/product/access-points) — names, URLs, sign-in, and account settings.
+- [Access points](/product/access-points) — names, URLs, sign-in, account settings, and deletion.
 - [Workspaces](/product/workspaces) — create, open, and delete workspaces.
 - [Permissions](/product/permissions) — permission groups, rules, and linked rules.
 - [Shared access](/product/shared-access) — let another access point use your workspaces.
